@@ -1,0 +1,12 @@
+export 'bot_nav_page.dart';
+export 'castom_tr.dart';
+export 'error.dart';
+export 'family.dart';
+export 'home.dart';
+export 'login.dart';
+export 'notification.dart';
+export 'person.dart';
+export 'preference.dart';
+export 'settings.dart';
+export 'stack.dart';
+export 'tab_bar_page.dart';

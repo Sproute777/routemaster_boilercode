@@ -21,3 +21,4 @@ dependencies:
   flutter_bloc: ^7.3.0
   routemaster: 0.10.0-dev4
   modal_bottom_sheet: ^2.0.0
+

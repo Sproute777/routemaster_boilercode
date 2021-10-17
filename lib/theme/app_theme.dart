@@ -16,10 +16,26 @@ enum AppTheme {
 final appThemeData = {
   AppTheme.yellowLight: ThemeData(
     brightness: Brightness.light,
-    primaryColor: primaryYellow,
+    primaryColor: primaryYellow, 
     scaffoldBackgroundColor: white1,
     primaryColorLight: white2,
     primaryColorDark: secondaryGrey,
+  //  textTheme: const TextTheme(
+  //  headline1: TextStyle(decorationColor: Colors.black),
+  //  headline2: TextStyle(decorationColor: Colors.black),
+  //  headline3: TextStyle(decorationColor: Colors.black),
+  //  headline4: TextStyle(decorationColor: Colors.black),
+  //  headline5: TextStyle(decorationColor: Colors.black),
+  //  headline6: TextStyle(decorationColor: Colors.black),
+  //  subtitle1: TextStyle(decorationColor: Colors.black),
+  //  subtitle2: TextStyle(decorationColor: Colors.black),
+  //  bodyText1: TextStyle(decorationColor: Colors.black),
+  //  bodyText2: TextStyle(decorationColor: Colors.black),
+  //  caption: TextStyle(decorationColor: Colors.black),
+  //  button: TextStyle(decorationColor: Colors.black),
+  //  overline: TextStyle(decorationColor: Colors.black),
+  //  ),
+
     colorScheme: const ColorScheme.light(
       primary: primaryYellow,
     ),

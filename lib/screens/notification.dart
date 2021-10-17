@@ -81,17 +81,24 @@ class NotificationsContentPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Feed'),
+        leading: IconButton(icon: const Icon(Icons.arrow_back),onPressed: ()=> Routemaster.of(context).pop(),),
       ),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
           Column(
             children: [
+         
               Text(message),
               ElevatedButton(
                 onPressed: () =>
                     Routemaster.of(context).push('/notifications/pushed'),
                 child: const Text('Push on top of tab stack'),
+              ),
+              ElevatedButton(
+                onPressed: () =>
+                    Routemaster.of(context).history.back(),
+                child: const Text('replace'),
               ),
             ],
           )
@@ -138,14 +145,14 @@ class DoubleBackPage extends StatelessWidget {
                 await Routemaster.of(context).pop();
                 await Routemaster.of(context).pop();
               },
-              child: Text('Go back twice'),
+              child: const Text('Go back twice'),
             ),
             ElevatedButton(
               onPressed: () {
                 Routemaster.of(context)
                     .replace('/bottom-navigation-bar/replaced');
               },
-              child: Text('Push replacement'),
+              child: const Text('Push replacement'),
             )
           ],
         ),

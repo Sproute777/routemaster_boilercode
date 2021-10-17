@@ -42,22 +42,25 @@ class HomePage extends StatelessWidget {
             ),
           )])
           ),
- floatingActionButton: Column(
-   mainAxisAlignment: MainAxisAlignment.end,
+ floatingActionButton: Wrap(
+ 
    children: [
      
-     FloatingActionButton(onPressed: (){
+     TextButton(onPressed: (){
      Routemaster.of(context).push('/tab-bar/settings');
-   },child: const Text('tab/bar/settings',style: TextStyle(fontSize: 10),)),
-     FloatingActionButton(onPressed: (){
+   },child: const Text('tab/bar/settings',style: TextStyle(color: Colors.black, fontSize: 10),)),
+
+     TextButton(onPressed: (){
      Routemaster.of(context).push('/stack/one');
-   },child: const Text('stack',style: TextStyle(fontSize: 10),),),
-     FloatingActionButton(onPressed: (){
+   },child: const Text('stack',style: TextStyle(color: Colors.black, fontSize: 10),),),
+
+     TextButton(onPressed: (){
      Routemaster.of(context).push('/custom-transitions');
-   },child: const Text('custom_transition',style: TextStyle(fontSize: 10),),),
-     FloatingActionButton(onPressed: (){
+   },child: const Text('custom_transition',style: TextStyle(color: Colors.black, fontSize: 10),),),
+   
+     TextButton(onPressed: (){
      Routemaster.of(context).push('/notifications');
-   },child: const Text('notifications',style: TextStyle(fontSize: 10),),),
+   },child: const Text('notifications',style: TextStyle(color: Colors.black, fontSize: 10),),),
    
    
    ]

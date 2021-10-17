@@ -26,39 +26,43 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MultiBlocProvider(
         providers: [
+
           BlocProvider(
-            create: (context) => ThemeCubit(),
-          ),
+            create: (context) => ThemeCubit(), ),
+
           BlocProvider(
-            create: (context) => AuthBloc(),
-          ),
+            create: (context) => AuthBloc(),),
+
           BlocProvider(
-            create: (context) => BonusCubit(),
-          ),
-        ],
-        child: BlocBuilder<ThemeCubit, ThemeState>(
-          builder: (context, theme) {
-            return BlocBuilder<AuthBloc, AuthStatus>(
-              builder: (context, status) {
-                return BlocBuilder<BonusCubit, BonusState>(
-                  builder: (context, state) {
-                    return MaterialApp.router(
+            create: (context) => BonusCubit(), ),
+
+          ],
+           child: BlocBuilder<ThemeCubit, ThemeState>(
+                           builder: (context, theme) {
+           return BlocBuilder<AuthBloc, AuthStatus>(
+                          builder: (context, status) {
+           return BlocBuilder<BonusCubit, BonusState>(
+                           builder: (context, state) {
+
+                             
+                      return MaterialApp.router(
                       title: 'application ',
                       theme: theme.themeData,
                       routeInformationParser: const RoutemasterParser(),
-                      routerDelegate: RoutemasterDelegate(
-                          observers: [TitleObserver()],
-                          routesBuilder: (_) => (status.isAuth)
-                              ? buildRouteMap(state)
-                              : loggedOutRouteMap),
-                    );
-                  },
+                      routerDelegate:
+                           RoutemasterDelegate(
+                               observers: [TitleObserver()],
+                               routesBuilder: (_) =>
+                                        (status.isAuth)  ? buildRouteMap(state)
+                                                         :   loggedOutRouteMap),
                 );
               },
             );
           },
-        ),
-      );
+        );
+      },
+    ),
+  );
 }
 
 class TitleObserver extends RoutemasterObserver {

@@ -97,6 +97,13 @@ RouteMap buildRouteMap(BonusState stateBonus) {
   '/notifications/pushed': (_) => const MaterialPage(
             child: MessagePage(message: 'Pushed notifications'),
           ),
+// -------------------------------------------------------------------------
+   '/hero': (_) => const MaterialPage(
+            name: 'hero',
+            child: HeroPage(),
+          ),
+
+     '/hero/aim': (_) => const MaterialPage(child: AimPage()),
                 },
 );}
    

@@ -61,6 +61,10 @@ class HomePage extends StatelessWidget {
      TextButton(onPressed: (){
      Routemaster.of(context).push('/notifications');
    },child: const Text('notifications',style: TextStyle(color: Colors.black, fontSize: 10),),),
+
+     TextButton(onPressed: (){
+     Routemaster.of(context).push('/hero');
+   },child: const Text('hero',style: TextStyle(color: Colors.black, fontSize: 10),),),
   //  testing
    
    ]

@@ -10,3 +10,4 @@ export 'preference.dart';
 export 'settings.dart';
 export 'stack.dart';
 export 'tab_bar_page.dart';
+export 'hero.dart';

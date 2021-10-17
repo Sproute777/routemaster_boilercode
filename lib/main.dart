@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '/bonus/bonus_cubit.dart';
-import '/routes.dart';
-import '/theme/cubit/theme_cubit.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:routemaster/routemaster.dart';
 
-import '/auth/auth_bloc.dart';
+import 'bonus/bonus_cubit.dart';
+import 'routes.dart';
+import 'theme/cubit/theme_cubit.dart';
+import 'auth/auth_bloc.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

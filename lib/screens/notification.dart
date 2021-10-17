@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class NotificationsPage extends StatefulWidget {
+  const NotificationsPage({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() => _NotificationsPageState();
 }
@@ -47,7 +49,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
     return CupertinoTabScaffold(
       controller: _tabController,
       tabBar: CupertinoTabBar(
-        items: <BottomNavigationBarItem>[
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             label: 'One',
             icon: Icon(CupertinoIcons.list_bullet),
@@ -71,16 +73,17 @@ class _NotificationsPageState extends State<NotificationsPage> {
 class NotificationsContentPage extends StatelessWidget {
   final String message;
 
+  // ignore: use_key_in_widget_constructors
   const NotificationsContentPage({required this.message});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Feed'),
+        title: const Text('Feed'),
       ),
       body: ListView(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         children: [
           Column(
             children: [
@@ -88,7 +91,7 @@ class NotificationsContentPage extends StatelessWidget {
               ElevatedButton(
                 onPressed: () =>
                     Routemaster.of(context).push('/notifications/pushed'),
-                child: Text('Push on top of tab stack'),
+                child: const Text('Push on top of tab stack'),
               ),
             ],
           )
@@ -101,7 +104,7 @@ class NotificationsContentPage extends StatelessWidget {
 class MessagePage extends StatelessWidget {
   final String message;
 
-  const MessagePage({required this.message});
+   const MessagePage({required this.message});
 
   @override
   Widget build(BuildContext context) {

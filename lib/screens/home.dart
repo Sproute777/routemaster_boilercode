@@ -2,9 +2,6 @@ import '../db/data_base.dart';
 import 'package:flutter/material.dart';
 import 'package:routemaster/routemaster.dart';
 
-String _title(BuildContext context) =>
-    (context as Element).findAncestorWidgetOfExactType<MaterialApp>()!.title;
-
 
 class HomePage extends StatelessWidget {
   const HomePage({required this.families, Key? key}) : super(key: key);

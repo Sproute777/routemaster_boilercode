@@ -1,10 +1,9 @@
 
 import 'package:routemaster/routemaster.dart';
 import 'package:flutter/material.dart';
-import 'db/data_base.dart';
 import 'package:routemaster_boilercode/screens/barrel.dart';
 
-
+import 'db/data_base.dart';
 import 'bonus/bonus_cubit.dart';
 
 RouteMap buildRouteMap(BonusState stateBonus) {
@@ -53,7 +52,7 @@ RouteMap buildRouteMap(BonusState stateBonus) {
           ),
 // --------------------------------------------------------------------------
     '/tab-bar': (_) => TabPage(
-            child: TabBarPage(),
+            child: const TabBarPage(),
             paths: [
                   'one',
                    if (stateBonus.showBonusTab) 'bonus',
@@ -78,7 +77,7 @@ RouteMap buildRouteMap(BonusState stateBonus) {
     '/custom-transitions': (_) => const CustomPage(
           child:  MessagePage(message: 'Custom transitions'),),
 // --------------------------------------------------------------------------
-          '/notifications': (_) => IndexedPage(
+          '/notifications': (_) => const IndexedPage(
             child: NotificationsPage(),
             paths: ['one', 'two'],
           ),
